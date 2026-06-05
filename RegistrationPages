@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="register-container">
+
+<div class="register-box">
+
+<h2>Create Account</h2>
+
+<form>
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" required>
+</div>
+
+<div class="input-group">
+<label>Student / Staff ID</label>
+<input type="text" required>
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" required>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password"
+id="password"
+required
+minlength="8">
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password"
+id="confirmPassword"
+required>
+</div>
+
+<div class="input-group">
+<label>Role</label>
+
+<select required>
+
+<option value="">
+Select Role
+</option>
+
+<option>
+Student
+</option>
+
+<option>
+HEP Staff
+</option>
+
+</select>
+
+</div>
+
+<div class="button-group">
+
+<button type="submit">
+Register
+</button>
+
+<button type="reset">
+Reset
+</button>
+
+</div>
+
+</form>
+
+<p class="login-link">
+Already have an account?
+<a href="login.html">Login Here</a>
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+document.querySelector("form")
+.addEventListener("submit", function(e){
+
+let pass =
+document.getElementById("password").value;
+
+let confirm =
+document.getElementById("confirmPassword").value;
+
+if(pass !== confirm){
+
+alert("Passwords do not match!");
+
+e.preventDefault();
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
