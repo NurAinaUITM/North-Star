@@ -1,48 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profile Management</title>
+    <title>Profile Management - Talentt-Archive</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
-<header>
-    <h1>Talent-Archive<h1>
-    <p>Cultural & Arts Directory</p>
-</header>
-    
-<nav>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="assets.html">Assets</a>
-    <a href="profile.html"Profile</a>
-    <a href="logout.html">Logout</a>
-</nav>
 
-<h2>Profile Management</h2>
-    
-<form>
-    
-    <label>Full Name</label><br>
-    <input type="text"><br><br>
-    
-    <label>Email</label><br>
-    <input type="email"><br><br>
-    
-    <label>Phone Number</label><br>
-    <input type="text"><br><br>
-    
-    <label>Address</label><br>
-    <textarea></textarea><br><br>
-    
-    <button>Update Profile</button>
-    
-</form>  
+<body class="app-layout">
 
-<footer>
-    <p>@ 2026 Talent-Archive</p>
-</footer>
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <h2>Talentt-Archive</h2>
+            <p>Cultural & Arts Directory</p>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="topbar">
+            <h2>Profile Management</h2>
+        </div>
+
+        <div class="page-content">
+
+            <!-- Profile Information -->
+            <div class="card">
+
+                <h3>Personal Information</h3>
+
+                <form>
+
+                    <label>Full Name</label>
+                    <input type="text"
+                           placeholder="Enter full name">
+
+                    <label>Student / Staff ID</label>
+                    <input type="text"
+                           placeholder="Enter ID">
+
+                    <label>Email Address</label>
+                    <input type="email"
+                           placeholder="Enter email address">
+
+
+                    <button type="submit">
+                        Update Profile
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Change Password -->
+            <div class="card">
+
+                <h3>Change Password</h3>
+
+                <form>
+
+                    <label>Current Password</label>
+                    <input type="password">
+
+                    <label>New Password</label>
+                    <input type="password">
+
+                    <label>Confirm New Password</label>
+                    <input type="password">
+
+                    <button type="submit">
+                        Change Password
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="card">
+
+                <h3>Profile Picture</h3>
+
+                <form>
+
+                    <label>Select Image</label>
+                    <input type="file">
+
+                    <button type="submit">
+                        Upload Picture
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

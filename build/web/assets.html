@@ -1,111 +1,150 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
 <html>
 <head>
-    <title>Asset Management</title>
+    <title>Cultural Asset Management - Talentt-Archive</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<header>
-    <h1>Talent-Archive</h1>
-    <p>Cultural & Arts Directory</p>
-</header>
+<body class="app-layout">
 
-<nav>
-    <a href="#">Dashboard</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Assets</a>
-    <a href="#">Profile</a>
-    <a href="#">Logout</a>
-</nav>
+    <!-- Sidebar -->
+    <div class="sidebar">
 
-<h2>Cultural Asset Management</h2>
+        <div class="sidebar-header">
+            <h2>Talentt-Archive</h2>
+            <p>Cultural & Arts Directory</p>
+        </div>
 
-<form>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
 
-    <label>Asset Name</label><br>
-    <input type="text"><br><br>
+    </div>
 
-    <label>Category</label><br>
-    <select>
-        <option>Musical Instruments</option>
-        <option>Costumes</option>
-        <option>Cultural Props</option>
-    </select><br><br>
+    <!-- Main Content -->
+    <div class="main-content">
 
-    <label>Quantity</label><br>
-    <input type="number"><br><br>
+        <div class="topbar">
+            <h2>Cultural Asset Management</h2>
+        </div>
 
-    <label>Maintenance Status</label><br>
-    <select>
-        <option>Good Condition</option>
-        <option>Under Maintenance</option>
-        <option>Damaged</option>
-    </select><br><br>
+        <div class="page-content">
 
-    <label>Last Maintenance Date</label><br>
-    <input type="date"><br><br>
+            <!-- Asset Form -->
+            <div class="card">
 
-    <button>Add Asset</button>
+                <h3>Add New Asset</h3>
 
-</form>
+                <form>
 
-<br>
+                    <label>Asset Name</label>
+                    <input type="text"
+                           placeholder="Enter asset name">
 
+                    <label>Category</label>
+                    <select>
+                        <option>Musical Instruments</option>
+                        <option>Costumes</option>
+                        <option>Cultural Props</option>
+                    </select>
 
-<br><br>
+                    <label>Quantity</label>
+                    <input type="number"
+                           placeholder="Enter quantity">
 
-<table>
+                    <label>Maintenance Status</label>
+                    <select>
+                        <option>Good Condition</option>
+                        <option>Under Maintenance</option>
+                        <option>Damaged</option>
+                    </select>
 
-<tr>
-    <th>ID</th>
-    <th>Asset Name</th>
-    <th>Category</th>
-    <th>Quantity</th>
-    <th>Status</th>
-    <th>Last Maintenance</th>
-    <th>Actions</th>
-</tr>
+                    <label>Last Maintenance Date</label>
+                    <input type="date">
 
-<tr>
-    <td>1</td>
-    <td>Violin</td>
-    <td>Musical Instruments</td>
-    <td>10</td>
-    <td>Good Condition</td>
-    <td>2025-05-01</td>
-    <td>Edit | Delete</td>
-</tr>
+                    <button type="submit">
+                        Add Asset
+                    </button>
 
-<tr>
-    <td>2</td>
-    <td>Traditional Costume</td>
-    <td>Costumes</td>
-    <td>25</td>
-    <td>Under Maintenance</td>
-    <td>2025-04-15</td>
-    <td>Edit | Delete</td>
-</tr>
+                </form>
 
-</table>
+            </div>
 
-<br>
+            <!-- Asset Inventory -->
+            <div class="card">
 
+                <h3>Asset Inventory</h3>
 
-<button>Edit</button>
-<button>Delete</button>
+                <table>
 
-<footer>
-    <p>© 2026 Talentt-Archive</p>
-</footer>
+                    <tr>
+                        <th>ID</th>
+                        <th>Asset Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Value (RM)</th>
+                        <th>Status</th>
+                        <th>Last Maintenance</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Violin</td>
+                        <td>Musical Instruments</td>
+                        <td>10</td>
+                        <td>15,000</td>
+                        <td>Good Condition</td>
+                        <td>2025-05-01</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Traditional Costume</td>
+                        <td>Costumes</td>
+                        <td>25</td>
+                        <td>8,500</td>
+                        <td>Under Maintenance</td>
+                        <td>2025-04-15</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Kompang Set</td>
+                        <td>Musical Instruments</td>
+                        <td>12</td>
+                        <td>3,000</td>
+                        <td>Good Condition</td>
+                        <td>2025-05-10</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

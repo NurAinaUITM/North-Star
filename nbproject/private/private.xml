@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/controller/ProfileServlet.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/dao/UserDAO.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/controller/LogoutServlet.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/model/ActivityBean.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/dao/PortfolioDAO.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/util/DBConnection.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/dao/AssetDAO.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/model/PortfolioBean.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/model/AssetBean.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/controller/PotrfolioServlet.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/controller/AssetServlet.java</file>
+            <file>file:/C:/Users/NurAinaNajwaNorDaumi/Netbeans/North-Star/dao/ActivityDAO.java</file>
+        </group>
+    </open-files>
 </project-private>

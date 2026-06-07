@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Logout</title>
+    <title>Logout - Talentt-Archive</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-        
-<header>
-    <h1>Talent-Archive</h1>
-    <p>Cultural & Arts Directory</p>
-</header>
-    
-<nav>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="assets.html">Assets</a>
-    <a href="profile.html">Profile</a>
-    <a href="logout.html">Logout</a>
-</nav>
 
- <h2>Logout</h2>
- 
- <p>You have successfully logged out.</p>
- 
- <button onclick="window.location.href='portfolio.html'">
-     Return to Home
- </button>
- 
- <footer>
-     <p>@ 2026 Talent-Archive</p>
- </footer>
- 
+<body class="app-layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <h2>Talentt-Archive</h2>
+            <p>Cultural & Arts Directory</p>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="topbar">
+            <h2>Logout</h2>
+        </div>
+
+        <div class="page-content">
+
+            <div class="card">
+
+                <h3>Session Ended</h3>
+
+                <p>
+                    You have successfully logged out of the
+                    Talentt-Archive system.
+                </p>
+
+                <p>
+                    Thank you for using the Cultural & Arts Directory.
+                </p>
+
+                <br>
+
+                <a href="login.html">
+                    <button type="button">
+                        Return to Login
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>

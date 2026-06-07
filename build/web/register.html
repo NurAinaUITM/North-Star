@@ -1,98 +1,69 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Talentt-Archive</title>
 
-<title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
+<body class="auth-page">
 
-<div class="register-container">
+<div class="auth-container">
 
-<div class="register-box">
+    <h2>Create Account</h2>
 
-<h2>Create Account</h2>
+    <form>
 
-<form>
+        <label>Full Name</label>
+        <input type="text" required>
 
-<div class="input-group">
-<label>Full Name</label>
-<input type="text" required>
-</div>
+        <label>Student ID</label>
+        <input type="text" required>
 
-<div class="input-group">
-<label>Student / Staff ID</label>
-<input type="text" required>
-</div>
+        <label>Email</label>
+        <input type="email" required>
 
-<div class="input-group">
-<label>Email</label>
-<input type="email" required>
-</div>
+        <label>Password</label>
+        <input type="password"
+               id="password"
+               minlength="8"
+               required>
 
-<div class="input-group">
-<label>Password</label>
-<input type="password"
-id="password"
-required
-minlength="8">
-</div>
+        <label>Confirm Password</label>
+        <input type="password"
+               id="confirmPassword"
+               required>
 
-<div class="input-group">
-<label>Confirm Password</label>
-<input type="password"
-id="confirmPassword"
-required>
-</div>
+        <label>Talent Category</label>
 
-<div class="input-group">
-<label>Role</label>
+        <select required>
+            <option value="">Select Category</option>
+            <option>Choir</option>
+            <option>Dance</option>
+            <option>Theatre</option>
+            <option>Traditional Music</option>
+            <option>Visual Arts</option>
+        </select>
 
-<select required>
+        <button type="submit">
+            Register
+        </button>
 
-<option value="">
-Select Role
-</option>
+        <button type="reset">
+            Reset
+        </button>
 
-<option>
-Student
-</option>
+    </form>
 
-<option>
-HEP Staff
-</option>
-
-</select>
-
-</div>
-
-<div class="button-group">
-
-<button type="submit">
-Register
-</button>
-
-<button type="reset">
-Reset
-</button>
-
-</div>
-
-</form>
-
-<p class="login-link">
-Already have an account?
-<a href="login.html">Login Here</a>
-</p>
-
-</div>
+    <p>
+        Already have an account?
+        <a href="login.html">Login Here</a>
+    </p>
 
 </div>
 
@@ -101,24 +72,21 @@ Already have an account?
 document.querySelector("form")
 .addEventListener("submit", function(e){
 
-let pass =
-document.getElementById("password").value;
+    let pass =
+        document.getElementById("password").value;
 
-let confirm =
-document.getElementById("confirmPassword").value;
+    let confirm =
+        document.getElementById("confirmPassword").value;
 
-if(pass !== confirm){
+    if(pass !== confirm){
 
-alert("Passwords do not match!");
+        alert("Passwords do not match!");
 
-e.preventDefault();
-
-}
-
+        e.preventDefault();
+    }
 });
 
 </script>
 
 </body>
-
 </html>
