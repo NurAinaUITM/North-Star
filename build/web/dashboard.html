@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Talent-Archive</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-purple: #2E0854;
+            --secondary-purple: #4B1A7A;
+            --accent-gold: #D4AF37;
+            --bg-light: #F4F6F9;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-gray: #666666;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            background-color: var(--primary-purple);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--secondary-purple);
+        }
+
+        .sidebar-header h3 {
+            margin: 0;
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid var(--secondary-purple);
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--white);
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: var(--secondary-purple);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .topbar {
+            background-color: var(--white);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .dashboard-container {
+            padding: 30px;
+        }
+
+        .section-title {
+            color: var(--primary-purple);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Card Layouts */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--accent-gold);
+        }
+
+        .card h4 {
+            margin: 0 0 10px 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .card .stat {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-purple);
+            margin: 0;
+        }
+
+        /* Chart Containers */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .chart-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        .role-badge {
+            background-color: var(--accent-gold);
+            color: var(--primary-purple);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Talent-Archive</h3>
+            <span style="font-size: 0.8rem;">Cultural Unit</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="portfolio.html">Talent Directory</a></li>
+            <li><a href="assets.html">Cultural Assets</a></li>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="logout.html" style="color: #ff9999;">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="topbar">
+            <h2>Overview</h2>
+            <div>
+                <span class="role-badge">HEP Staff View</span>
+                <span style="margin-left: 15px;">Welcome, Admin</span>
+            </div>
+        </div>
+
+        <div class="dashboard-container">
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Total Registered Students</h4>
+                    <p class="stat">1,245</p>
+                </div>
+                <div class="card">
+                    <h4>Total Assets</h4>
+                    <p class="stat">342</p>
+                </div>
+                <div class="card">
+                    <h4>Assets Under Maintenance</h4>
+                    <p class="stat" style="color: #d93025;">18</p>
+                </div>
+                <div class="card">
+                    <h4>High Value Assets</h4>
+                    <p class="stat">45</p>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3 class="section-title">Talent Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="talentPieChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3 class="section-title">Asset Maintenance Status</h3>
+                    <div class="chart-container">
+                        <canvas id="assetBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </div>
+
+    <script>
+        // 1. Talent Distribution (Pie Chart) based on requirements
+        const pieCtx = document.getElementById('talentPieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Choir', 'Dance', 'Theatre', 'Traditional Music', 'Visual Arts'],
+                datasets: [{
+                    data: [25, 30, 15, 20, 10], // Sample data
+                    backgroundColor: [
+                        '#2E0854', // Dark Purple
+                        '#D4AF37', // Gold
+                        '#6B2D9E', // Light Purple
+                        '#E5C765', // Light Gold
+                        '#1B0433'  // Deepest Purple
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // 2. Asset Maintenance Status (Bar Chart) based on requirements
+        const barCtx = document.getElementById('assetBarChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Good Condition', 'Under Maintenance', 'Damaged'],
+                datasets: [{
+                    label: 'Number of Assets',
+                    data: [280, 18, 5], // Sample data
+                    backgroundColor: [
+                        '#2E0854', // Dark Purple
+                        '#D4AF37', // Gold
+                        '#D93025'  // Red for Damaged
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
