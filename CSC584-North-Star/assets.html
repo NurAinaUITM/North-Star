@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cultural Asset Management - Talentt-Archive</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="app-layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <h2>Talentt-Archive</h2>
+            <p>Cultural & Arts Directory</p>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="topbar">
+            <h2>Cultural Asset Management</h2>
+        </div>
+
+        <div class="page-content">
+
+            <!-- Asset Form -->
+            <div class="card">
+
+                <h3>Add New Asset</h3>
+
+                <form>
+
+                    <label>Asset Name</label>
+                    <input type="text"
+                           placeholder="Enter asset name">
+
+                    <label>Category</label>
+                    <select>
+                        <option>Musical Instruments</option>
+                        <option>Costumes</option>
+                        <option>Cultural Props</option>
+                    </select>
+
+                    <label>Quantity</label>
+                    <input type="number"
+                           placeholder="Enter quantity">
+
+                    <label>Maintenance Status</label>
+                    <select>
+                        <option>Good Condition</option>
+                        <option>Under Maintenance</option>
+                        <option>Damaged</option>
+                    </select>
+
+                    <label>Last Maintenance Date</label>
+                    <input type="date">
+
+                    <button type="submit">
+                        Add Asset
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Asset Inventory -->
+            <div class="card">
+
+                <h3>Asset Inventory</h3>
+
+                <table>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Asset Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Value (RM)</th>
+                        <th>Status</th>
+                        <th>Last Maintenance</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Violin</td>
+                        <td>Musical Instruments</td>
+                        <td>10</td>
+                        <td>15,000</td>
+                        <td>Good Condition</td>
+                        <td>2025-05-01</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Traditional Costume</td>
+                        <td>Costumes</td>
+                        <td>25</td>
+                        <td>8,500</td>
+                        <td>Under Maintenance</td>
+                        <td>2025-04-15</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Kompang Set</td>
+                        <td>Musical Instruments</td>
+                        <td>12</td>
+                        <td>3,000</td>
+                        <td>Good Condition</td>
+                        <td>2025-05-10</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

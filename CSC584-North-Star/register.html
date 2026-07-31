@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Register - Talentt-Archive</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+
+    <h2>Create Account</h2>
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Student ID</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Password</label>
+        <input type="password"
+               id="password"
+               minlength="8"
+               required>
+
+        <label>Confirm Password</label>
+        <input type="password"
+               id="confirmPassword"
+               required>
+
+        <label>Talent Category</label>
+
+        <select required>
+            <option value="">Select Category</option>
+            <option>Choir</option>
+            <option>Dance</option>
+            <option>Theatre</option>
+            <option>Traditional Music</option>
+            <option>Visual Arts</option>
+        </select>
+
+        <button type="submit">
+            Register
+        </button>
+
+        <button type="reset">
+            Reset
+        </button>
+
+    </form>
+
+    <p>
+        Already have an account?
+        <a href="login.html">Login Here</a>
+    </p>
+
+</div>
+
+<script>
+
+document.querySelector("form")
+.addEventListener("submit", function(e){
+
+    let pass =
+        document.getElementById("password").value;
+
+    let confirm =
+        document.getElementById("confirmPassword").value;
+
+    if(pass !== confirm){
+
+        alert("Passwords do not match!");
+
+        e.preventDefault();
+    }
+});
+
+</script>
+
+</body>
+</html>
